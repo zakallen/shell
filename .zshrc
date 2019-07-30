@@ -101,10 +101,14 @@ source $ZSH/oh-my-zsh.sh
 alias code="open -a 'Visual Studio Code'"
 alias editzsh="code ~/.zshrc"
 
+# Directory aliases
+alias bonsai="cd ~/Code/bonsai"
+alias phoenix="cd ~/Code/bonsai/phoenix"
+alias katana="cd ~/Code/katana"
+
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 autoload -U promptinit; promptinit
 prompt pure
 
 cat ~/Code/shell/zak.txt
-
