@@ -102,6 +102,13 @@ alias code="open -a 'Visual Studio Code'"
 alias editzsh="code ~/.zshrc"
 alias reload=". ~/.zshrc"
 alias branchclean="git branch | grep -v 'master' | xargs git branch -D"
+alias masterclean="git branch | grep -v 'master' | xargs git branch -D"
+alias developclean="git branch | grep -v 'develop' | xargs git branch -D"
+
+# kills all processes running on a provided port
+function killport () {
+  lsof -i tcp:${1} | awk 'NR!=1 {print $2}' | xargs kill
+}
 
 # Directory aliases
 alias shell="cd ~/Code/shell"
@@ -110,6 +117,9 @@ alias shell="cd ~/Code/shell"
 alias bonsai="cd ~/Code/bonsai"
 alias phoenix="cd ~/Code/bonsai/phoenix"
 alias katana="cd ~/Code/katana"
+alias uma="cd ~/Code/uma"
+
+export AWS_IAM_USER="zak"
 
 source /Users/zak/.rvm/scripts/rvm
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
