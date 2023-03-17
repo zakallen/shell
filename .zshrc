@@ -98,6 +98,13 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+# This is for pure prompt when installed by homebrew
+fpath+=("$(brew --prefix)/share/zsh/site-functions")
+# path for zsh syntax highlighting
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 alias code="open -a 'Visual Studio Code'"
 alias editzsh="code ~/.zshrc"
 alias reload=". ~/.zshrc"
@@ -113,25 +120,20 @@ function killport () {
 # Directory aliases
 alias shell="cd ~/Code/shell"
 
-# Shogun specific directories
-alias bonsai="cd ~/Code/bonsai"
-alias phoenix="cd ~/Code/bonsai/phoenix"
-alias katana="cd ~/Code/katana"
-alias uma="cd ~/Code/uma"
+# Homemade
+alias atrium="cd ~/Code/atrium"
 
-export AWS_IAM_USER="zak"
+# RVM config
+# source /Users/zak/.rvm/scripts/rvm
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+# export PATH="$PATH:$HOME/.rvm/bin"
 
-source /Users/zak/.rvm/scripts/rvm
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# NVM config
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 autoload -U promptinit; promptinit
 prompt pure
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 cat ~/Code/shell/zak.txt

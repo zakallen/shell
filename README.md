@@ -7,7 +7,7 @@ Settings for my dev environment.
 ### Install everything
 1. Get [iTerm2](https://www.iterm2.com/) as a terminal replacement.
 2. Within iTerm download [oh my zsh](https://ohmyz.sh/).
-3. Next, install [pure-prompt](https://github.com/sindresorhus/pure).
+3. Next, install [pure-prompt](https://github.com/sindresorhus/pure). Use the homebrew installation.
 4. Get [iterm2-snazzy](https://github.com/sindresorhus/iterm2-snazzy).
 5. Also get [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting).
 
@@ -16,7 +16,7 @@ Here are a couple settings I like to get a full clean version of iTerm where it 
 1. Use Minimal Theme
 2. Change font to Menlo
 3. Use a custom window title and set to `~`
-4. In the "General" section uder "Advanced", set terminal pane margin for Top/Bottom and Left/Right to 15
+4. In the "Panes" section uder "Appearance", set margins for Top/Bottom and Left/Right (Side) to 15
 
 ### Final touch ups
 1. If you want to remove the "last login" text at the start of each session do:
